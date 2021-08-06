@@ -1,0 +1,28 @@
+/* 
+#container with elements[float] 
+#code to restore page flow after applying float to layout
+#better approarch
+*/
+
+.group:before,
+.group:after {
+  content: "";
+  display: table;
+}
+.group:after {
+  clear: both;
+}
+.group {
+  clear: both;
+  *zoom: 1;
+}
+
+
+
+/*
+#simple alternative
+#next element after float shout clear float
+*/
+
+footer{
+clear:both;
